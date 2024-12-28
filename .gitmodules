@@ -1,3 +1,4 @@
 [submodule "nvim-bootstrap"]
 	path = nvim-bootstrap
 	url = https://github.com/ShGoose/goose-nvim-bootstrap.git
+	branch = main

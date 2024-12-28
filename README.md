@@ -15,6 +15,11 @@
     sudo apt update
     sudo apt install fish
     ```
+   *ubuntu 22*
+   ```shell
+   wget https://launchpad.net/~fish-shell/+archive/ubuntu/release-3/+files/fish_3.7.1-1~jammy_amd64.deb
+   dpkg -i fish_3.7.1-1~jammy_amd64.deb
+   ```
    `chsh -s /usr/bin/fish $(whoami)`
  - copy everything from .config to /home/user/.config/
    ```shell
