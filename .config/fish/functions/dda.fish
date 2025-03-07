@@ -1,3 +1,4 @@
 function dda
-    date --universal +\"$SPECIFIC_TIMEFORMAT\"
+  set SPECIFIC_TIMEFORMAT %Y%m%dT%H%M%S
+    date --universal +"$SPECIFIC_TIMEFORMAT"
 end
