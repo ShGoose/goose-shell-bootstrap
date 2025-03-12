@@ -21,6 +21,22 @@
    sudo dpkg -i fish_3.7.1-1~jammy_amd64.deb
    sudo apt install libpcre2-32-0
    ```
+   *ubuntu 24.10 raspberrypi 4b*
+   ```shell
+   # rust setup
+   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+   . "$HOME/.cargo/env"
+   sudo su
+   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+   # fish setup
+   git clone https://github.com/fish-shell/fish-shell.git
+   cd fish-shell
+   cmake .
+   make
+   sudo su
+   make install
+   ```
    `sudo chsh -s /usr/bin/fish $(whoami)`
  - copy everything from .config to /home/user/.config/
    ```shell
