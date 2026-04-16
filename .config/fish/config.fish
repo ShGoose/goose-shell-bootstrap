@@ -3,12 +3,16 @@ if status is-interactive
 end
 
 set fish_greeting
+set fish_key_bindings fish_user_key_bindings
 
-if [ $EUID -eq 0 ]
-        set --global CANNONICAL_SELF_DIR $( getent passwd $SUDO_USER | cut -d: -f6 )
+
+if [ (id -u) -eq 0 ]
+        set --global CANNONICAL_SELF_DIR ( getent passwd $SUDO_USER | cut -d: -f6 )
 else
         set --global CANNONICAL_SELF_DIR $HOME
 end
+
+set -g -x PATH $PATH:/usr/local/go/bin
 
 if [ ! -d $CANNONICAL_SELF_DIR/.isolated ]
     mkdir $CANNONICAL_SELF_DIR/.isolated
